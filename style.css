@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;margin: 0;padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+display: flex;flex-direction: column;background-color:pink;
+}
+.header{
+line-height: 12rem;position: fixed;right:0;left: 0;box-shadow: 0 .5px 3rem .5px black;background-image: linear-gradient(to right,rgb(17, 17, 17),rgb(75, 75, 75));
+line-height: 12rem;position: fixed;right:0;left: 0;box-shadow: 0 .5px 3rem .5px black;background-color: black;
+
+}
+.header .logo{
+    height: 5rem;top: .5rem;position: relative;right: 1rem;-webkit-tap-highlight-color:transparent;
+}
+h1{
+    color: yellow;font-size: 4.8rem;font-weight: 300;font-family:Verdana, Geneva, Tahoma, sans-serif;text-align: center;bottom: 1rem;position: relative;
+}
+ol{
+    margin-top: 12rem;display: grid;grid-template-columns: repeat(auto-fit,minmax(250px,1fr));grid-gap:2rem;margin:25rem 4rem 4rem 4rem;
+}
+
+li.card{
+    font-size: 1.6rem;box-shadow:0 1px 3px .5px black ;display: flex;flex-direction: column;justify-content: center;align-items: center;background-color: whitesmoke;border-radius: .5rem;
+}
+
+.card_title{
+color: green; text-transform: capitalize;font-family: monospace;
+}
+.card_subtitle{
+font-family: monospace;color: blue ;margin-bottom: 2rem;
+}
+.logo_container{
+    display: flex;height: 6rem;width: 30rem;justify-content: space-evenly;align-items: center;box-shadow: 0px 1px 2px .5px black ;border-radius: 5px;position: relative;margin: auto;bottom: 2rem;
+    }
+    .logo_container img{
+        height: 4rem;width: auto;position: relative;top: 2rem;-webkit-tap-highlight-color:transparent
+    }
+    footer{
+       height: 20rem;background-color: black;color: white;text-align: center;display: flex;flex-direction: column;justify-content: center;font-family: monospace;
+    }
+    footer p{
+        font-size: 1.6rem;
+    }
+    
+    main{
+        display: none;
+    }
+    .loading_screen{
+position: absolute;background-color: black;top: 0;bottom: 0;left: 0;right: 0;z-index: 1;display: grid;place-content: center;
+    }
+    @keyframes loading_logo {
+     0% {
+           transform:rotate (0deg);
+       } 
+       100%{
+           transform:rotate(360deg);
+       }
+    }
+
+    .loading_screen_image{
+        height: 10rem;position: relative;animation:loading_logo 2s linear infinite;
+    }
